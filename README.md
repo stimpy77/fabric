@@ -40,6 +40,7 @@
   - [Using the fabric client](#using-the-fabric-client)
   - [Just use the Patterns](#just-use-the-patterns)
   - [Create your own Fabric Mill](#create-your-own-fabric-mill)
+- [Updating](#updating)
 - [Structure](#structure)
   - [Components](#components)
   - [CLI-native](#cli-native)
@@ -199,6 +200,18 @@ fabric --help
 > [!NOTE]
 > If you're using the `server` functions, `fabric-api` and `fabric-webui` need to be run in distinct terminal windows.
 
+## Updating
+
+To update Fabric, run the following commands.
+
+```bash
+# From the fabric directory
+pipx install . --force
+fabric --update
+```
+
+Then restart your shell.
+
 ### Using the `fabric` client
 
 If you want to use it with OpenAI API-compatible inference servers, such as [FastChat](https://github.com/lm-sys/FastChat), [Helmholtz Blablador](http://helmholtz-blablador.fz-juelich.de), [LM Studio](https://lmstudio.ai) and others, simply export the following environment variables:
@@ -241,7 +254,7 @@ options:
                         sets the frequency penalty for the model. Default is 0.1
   --presence_penalty PRESENCE_PENALTY
                         sets the presence penalty for the model. Default is 0.1
-  --update, -u          Update patterns. NOTE: This will revert the default model to gpt4-turbo. please run --changeDefaultModel to once again set the default model
+  --update, -u          Update patterns.
   --pattern PATTERN, -p PATTERN
                         The pattern (prompt) to use
   --setup               Set up your fabric instance
